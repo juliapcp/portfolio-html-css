@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css"> <!-- Link para o arquivo de estilos externo -->
     <title>Portfólio - Julia Pontes Cardoso Pereira</title>
 </head>
 
 <body>
     <nav>
-        <a class="menu" id="sobreMimMenu" class="ativo" href="#sobreMim" onclick="trocaMenuAtivo('sobreMimMenu', 'sobreMim')">Sobre mim</a>
-        <a class="menu" id="formacaoMenu" href="#formacao" onclick="trocaMenuAtivo('formacaoMenu', 'formacao')">Formação</a>
+        <a class="menu" id="sobreMimMenu" class="ativo" href="#sobreMim"
+            onclick="trocaMenuAtivo('sobreMimMenu', 'sobreMim')">Sobre mim</a>
+        <!-- Link para a seção "Sobre mim" e função JavaScript associada -->
+        <a class="menu" id="formacaoMenu" href="#formacao"
+            onclick="trocaMenuAtivo('formacaoMenu', 'formacao')">Formação</a>
+        <!-- Link para a seção "Formação" e função JavaScript associada -->
         <a class="menu" id="contatoMenu" href="#contato" onclick="trocaMenuAtivo('contatoMenu', 'contato')">Contato</a>
-        <a href="https://github.com/juliapcp">Portfólio (GitHub)</a>
+        <!-- Link para a seção "Contato" e função JavaScript associada -->
+        <a href="https://github.com/juliapcp">Portfólio (GitHub)</a> <!-- Link externo para o portfólio no GitHub -->
     </nav>
     <div class="main">
 
@@ -70,21 +75,20 @@
 
     <script>
         function trocaMenuAtivo(idMenuAtivo, idDivAtiva) {
-            // troca o sinalizador do menu ativo
+            // Função JavaScript para trocar o menu ativo e mostrar a seção ativa
             let menus = document.getElementsByClassName("menu");
             for (let i = 0; i < menus.length; i++) {
-                menus[i].classList.remove("ativo");
+                menus[i].classList.remove("ativo"); // Remove a classe "ativo" dos menus
             }
-            document.getElementById(idMenuAtivo).classList.add("ativo");
+            document.getElementById(idMenuAtivo).classList.add("ativo"); // Adiciona a classe "ativo" ao menu ativo
 
-            //mostra somente a div ativa
-        
+            // Mostra somente a div ativa
             let divs = document.querySelectorAll(".main > div");
             for (let i = 0; i < divs.length; i++) {
                 if (divs[i].id === idDivAtiva) {
-                    divs[i].style.display = "block";
+                    divs[i].style.display = "block"; // Mostra a seção ativa
                 } else {
-                    divs[i].style.display = "none";
+                    divs[i].style.display = "none"; // Esconde as outras seções
                 }
             }
         }
