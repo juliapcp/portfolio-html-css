@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio - Julia Pontes Cardoso Pereira</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Portfólio - Julia Pontes Cardoso Pereira</title>
 </head>
+
 <body>
-    
+    <nav>
+        <a class="menu" id="sobreMimMenu" class="ativo" href="#sobreMim" onclick="trocaMenuAtivo('sobreMimMenu', 'sobreMim')">Sobre mim</a>
+        <a class="menu" id="formacaoMenu" href="#formacao" onclick="trocaMenuAtivo('formacaoMenu', 'formacao')">Formação</a>
+        <a class="menu" id="contatoMenu" href="#contato" onclick="trocaMenuAtivo('contatoMenu', 'contato')">Contato</a>
+        <a href="https://github.com/juliapcp">Portfólio (GitHub)</a>
+    </nav>
+    <div class="main">
+
+        <div id="sobreMim">
+            <h1>Sobre mim</h1>
+            <p>
+                Técnica em Informática para Internet pelo IFRS, graduanda do curso superior em Tecnologia em Análise e
+                Desenvolvimento
+                de Sistemas pela Uninter e desenvolvedora Fullstack, com ênfase no uso de Java e Typescript.
+            </p>
+            <p>
+                Apaixonada pela área da Tecnologia da Informação e sempre disposta a adquirir novos conhecimentos!
+            </p>
+        </div>
+
+        <div id="formacao">
+            <h1>Formação</h1>
+            <ul>
+                <li>Inglês de intermediário a avançado.</li>
+                <li>Técnico em informática para internet (CH: 3.493 horas)</li>
+                <ul>
+                    <li>IFRS - Campus Rio Grande</li>
+                    <li>2018 - 2022</li>
+                </ul>
+                <li>Tecnologia em Análise e Desenvolvimento de Sistemas</li>
+                <ul>
+                    <li>UNINTER</li>
+                    <li>2023 - 2025</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="contato">
+            <h1>Contato</h1>
+
+            <div class="formulario">
+                <form>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome..">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail..">
+
+                    <label for="assunto">Assunto</label>
+                    <textarea id="assunto" name="assunto" placeholder="Escreva algo.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Contatar">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function trocaMenuAtivo(idMenuAtivo, idDivAtiva) {
+            // troca o sinalizador do menu ativo
+            let menus = document.getElementsByClassName("menu");
+            for (let i = 0; i < menus.length; i++) {
+                menus[i].classList.remove("ativo");
+            }
+            document.getElementById(idMenuAtivo).classList.add("ativo");
+
+            //mostra somente a div ativa
+        
+            let divs = document.querySelectorAll(".main > div");
+            for (let i = 0; i < divs.length; i++) {
+                if (divs[i].id === idDivAtiva) {
+                    divs[i].style.display = "block";
+                } else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

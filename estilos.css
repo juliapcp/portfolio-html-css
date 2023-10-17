@@ -1,0 +1,81 @@
+/* Adiciona cor de fundo */
+@import url('https: //fonts.googleapis.com/css?family=Poppins&display=swap');
+body {
+    background-color: #fcf6fff3;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #72365b;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Estiliza os links dentro da barra de navegação */
+nav a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Altera a cor dos links ao passar o mouse */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Adiciona uma cor ao link atual */
+nav a.ativo {
+    background-color: #402039;
+    color: white;
+}
+
+#sobreMim,
+#formacao,
+#contato {
+    padding: 16px;
+    margin-top: 40px;
+    height: 1500px;
+}
+
+/* Estilizar inputs e textareas */
+input[type=text],
+input[type=email],
+textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+/* Estiliza o botão de envio com uma cor de fundo*/
+input[type=submit] {
+    background-color: #965e81;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Ao passar o mouse sobre o botão de envio, adiciona uma cor mais escura */
+input[type=submit]:hover {
+    background-color: #72365b;
+}
+
+/* Estiliza o formulário*/
+.formulario {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
